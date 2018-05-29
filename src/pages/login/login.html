@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Login Page
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <p>
+        Welcome to the login page!
+    </p>
+
+    <ion-list>
+        <ion-item>
+            <ion-label stacked>Email</ion-label>
+            <ion-input type="email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+                <ion-label stacked>Password</ion-label>
+                <ion-input type="Password"></ion-input>
+            </ion-item>
+    </ion-list>
+
+    <button ion-button (click)="navigateToProfilePage()">Log In</button>
+
+</ion-content>
