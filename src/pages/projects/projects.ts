@@ -16,18 +16,25 @@ import { DetailsPage } from '../details/details';
 })
 export class ProjectsPage {
 
-  projects: any;
+  public projects: object;
+  public water: object;
+  public gates: object;
+  public ocean: object;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.projects = [
-      'Charity: water',
-      'Bill & Melinda Gates Foundation',
-      'Oceana'
+      this.water = {name: 'Charity: water', description: 'test'},
+      this.gates = {name: 'Bill & Melinda Gates Foundation', description: 'test'},
+      this.ocean = {name: 'Oceana', description: 'test'}
     ];
+
   }
 
-  navToProject() {
-    this.navCtrl.push(DetailsPage);
+  navToDetails(project) {
+    this.navCtrl.push(DetailsPage, {
+      charity: project.name,
+      description: project.description
+    });
   }
 
   ionViewDidLoad() {
