@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../home/home';
+import { ProjectsPage } from '../projects/projects';
 
 @Component({
   selector: 'page-profile',
@@ -8,12 +9,24 @@ import { HomePage } from '../home/home';
 })
 export class ProfilePage {
 
-  constructor(public navCtrl: NavController) {
+  public username: string;
+  public password: string;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
 
   }
 
-  navigateToHomePage() {
+  navToProjectsPage() {
+    this.navCtrl.push(ProjectsPage);
+  }
+
+  navToHomePage() {
     this.navCtrl.popToRoot();
+  }
+
+  ionViewDidLoad() {
+    this.username = this.navParams.get("username");
+    this.password = this.navParams.get("password");
   }
 
 }

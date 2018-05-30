@@ -13,11 +13,11 @@ export class HomePage {
 
   }
 
-  navigateToLogin() {
+  navToLogin() {
     this.navCtrl.push(LoginPage);
   }
 
-  navigateToRegistration() {
+  navToRegistration() {
     this.navCtrl.setRoot(HomePage);
     this.navCtrl.push(RegistrationPage);
   }

@@ -8,9 +8,10 @@
 
 <ion-content padding>
     <p>
-        Welcome to your profile!
+        Welcome {{username}} to your profile! Your password is: {{password}}.
     </p>
 
-    <button ion-button (click)="navigateToHomePage()">Log Out</button>
+    <button ion-button round (click)="navToProjectsPage()">View Projects</button>
+    <button ion-button round (click)="navToHomePage()">Log Out</button>
 
 </ion-content>
