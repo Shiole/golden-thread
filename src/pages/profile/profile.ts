@@ -9,7 +9,14 @@ import { ProjectsPage } from '../projects/projects';
 })
 export class ProfilePage {
 
+  public firstName: string;
+  public lastName: string;
+  public dateOfBirth: string;
   public username: string;
+  public email: string;
+  public address: string;
+  public city: string;
+  public country: string;
   public password: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
@@ -25,8 +32,14 @@ export class ProfilePage {
   }
 
   ionViewDidLoad() {
+    this.firstName = this.navParams.get("firstName");
+    this.lastName = this.navParams.get("lastName");
+    this.dateOfBirth = this.navParams.get("dateOfBirth");
     this.username = this.navParams.get("username");
-    this.password = this.navParams.get("password");
+    this.email = this.navParams.get("email");
+    this.address = this.navParams.get("address");
+    this.city = this.navParams.get("city");
+    this.country = this.navParams.get("country");
   }
 
 }

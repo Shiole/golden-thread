@@ -11,7 +11,14 @@
         Welcome {{username}} to your profile!
     </h1>
 
-    <button class="center" ion-button round (click)="navToProjectsPage()">View Projects</button>
+    <p>Name: {{firstName}} {{lastName}}</p>
+    <p>Birthday: {{dateOfBirth}}</p>
+    <p>Email: {{email}}</p>
+    <p>Address: {{address}}</p>
+    <p>City: {{city}}</p>
+    <p>Country: {{country}}</p>
+
+    <button ion-button round (click)="navToProjectsPage()">View Projects</button>
     <button ion-button round (click)="navToHomePage()">Log Out</button>
 
 </ion-content>

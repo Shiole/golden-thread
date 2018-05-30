@@ -11,6 +11,7 @@ export class RegistrationPage {
   public firstName: string;
   public lastName: string;
   public dateOfBirth: string;
+  public username: string;
   public email: string;
   public address: string;
   public city: string;
@@ -26,6 +27,7 @@ export class RegistrationPage {
       firstName: this.firstName,
       lastName: this.lastName,
       dateOfBirth: this.dateOfBirth,
+      username: this.username,
       email: this.email,
       address: this.address,
       city: this.city,
