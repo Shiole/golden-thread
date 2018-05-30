@@ -13,6 +13,10 @@ export class HomePage {
 
   }
 
+  navToHome() {
+    this.navCtrl.push(HomePage);
+  }
+
   navToLogin() {
     this.navCtrl.push(LoginPage);
   }

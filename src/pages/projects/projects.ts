@@ -23,9 +23,9 @@ export class ProjectsPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.projects = [
-      this.water = {name: 'Charity: water', description: 'test'},
-      this.gates = {name: 'Bill & Melinda Gates Foundation', description: 'test'},
-      this.ocean = {name: 'Oceana', description: 'test'}
+      this.water = {name: 'Charity: water', details: 'test'},
+      this.gates = {name: 'Bill & Melinda Gates Foundation', details: 'test'},
+      this.ocean = {name: 'Oceana', details: 'test'}
     ];
 
   }
@@ -33,7 +33,7 @@ export class ProjectsPage {
   navToDetails(project) {
     this.navCtrl.push(DetailsPage, {
       charity: project.name,
-      description: project.description
+      details: project.details
     });
   }
 

@@ -7,11 +7,11 @@
 </ion-header>
 
 <ion-content padding>
-    <p>
-        Welcome {{username}} to your profile! Your password is: {{password}}.
-    </p>
+    <h1 text-center>
+        Welcome {{username}} to your profile!
+    </h1>
 
-    <button ion-button round (click)="navToProjectsPage()">View Projects</button>
+    <button class="center" ion-button round (click)="navToProjectsPage()">View Projects</button>
     <button ion-button round (click)="navToHomePage()">Log Out</button>
 
 </ion-content>

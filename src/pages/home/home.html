@@ -1,12 +1,19 @@
-<ion-header>
+<ion-header text-center class="header">
   <ion-navbar>
-    <ion-title>
-      Home
-    </ion-title>
+    <a class="logo">
+      <ion-title>
+        Golden Thread
+      </ion-title>
+    </a>
+    <div class="header-right">
+        <a class="active" (click)="navToHome()">Home</a>
+        <a (click)="navToHome()">Contact</a>
+        <a (click)="navToHome()">About</a>
+    </div>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content text-center padding>
   The world is your oyster.
   <p>
     Welcome to the home page!
