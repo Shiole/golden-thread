@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { ProjectsPage } from '../projects/projects';
+import { PortfolioPage } from '../portfolio/portfolio';
+import { PaymentPage } from '../payment/payment';
 
 @Component({
   selector: 'page-profile',
@@ -9,18 +11,21 @@ import { ProjectsPage } from '../projects/projects';
 })
 export class ProfilePage {
 
+  public username: string;
   public firstName: string;
   public lastName: string;
-  public dateOfBirth: string;
-  public username: string;
   public email: string;
-  public address: string;
-  public city: string;
-  public country: string;
   public password: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 
+  }
+
+  navToPortfolioPage() {
+    this.navCtrl.push(PortfolioPage);
+  }
+  navToPaymentPage() {
+    this.navCtrl.push(PaymentPage);
   }
 
   navToProjectsPage() {
@@ -32,14 +37,10 @@ export class ProfilePage {
   }
 
   ionViewDidLoad() {
+    this.username = this.navParams.get("username");
     this.firstName = this.navParams.get("firstName");
     this.lastName = this.navParams.get("lastName");
-    this.dateOfBirth = this.navParams.get("dateOfBirth");
-    this.username = this.navParams.get("username");
     this.email = this.navParams.get("email");
-    this.address = this.navParams.get("address");
-    this.city = this.navParams.get("city");
-    this.country = this.navParams.get("country");
   }
 
 }

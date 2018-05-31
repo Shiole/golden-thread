@@ -11,6 +11,8 @@ import { RegistrationPage } from '../pages/registration/registration';
 import { ProfilePage } from '../pages/profile/profile';
 import { ProjectsPage } from '../pages/projects/projects';
 import { DetailsPage } from '../pages/details/details';
+import { PortfolioPage } from '../pages/portfolio/portfolio';
+import { PaymentPage } from '../pages/payment/payment';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { DetailsPage } from '../pages/details/details';
     RegistrationPage,
     ProfilePage,
     ProjectsPage,
-    DetailsPage
+    DetailsPage,
+    PortfolioPage,
+    PaymentPage
   ],
   imports: [
     BrowserModule,
@@ -34,7 +38,9 @@ import { DetailsPage } from '../pages/details/details';
     RegistrationPage,
     ProfilePage,
     ProjectsPage,
-    DetailsPage
+    DetailsPage,
+    PortfolioPage,
+    PaymentPage
   ],
   providers: [
     StatusBar,

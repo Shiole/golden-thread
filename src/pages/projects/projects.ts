@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { DetailsPage } from '../details/details';
+import { Charity } from '../../model/charity';
 
 /**
  * Generated class for the ProjectsPage page.
@@ -16,16 +17,16 @@ import { DetailsPage } from '../details/details';
 })
 export class ProjectsPage {
 
-  public projects: object;
-  public water: object;
-  public gates: object;
-  public ocean: object;
+  public projects: Array<Charity>;
+  public water: Charity;
+  public gates: Charity;
+  public ocean: Charity;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.projects = [
-      this.water = {name: 'Charity: water', details: 'test'},
-      this.gates = {name: 'Bill & Melinda Gates Foundation', details: 'test'},
-      this.ocean = {name: 'Oceana', details: 'test'}
+      this.water = {id: 1, name: 'Charity: water', details: 'test'},
+      this.gates = {id: 2, name: 'Bill & Melinda Gates Foundation', details: 'test'},
+      this.ocean = {id: 3, name: 'Oceana', details: 'test'}
     ];
 
   }

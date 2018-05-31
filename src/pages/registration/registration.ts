@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ProfilePage } from '../profile/profile';
+import { User } from '../../model/user';
 
 @Component({
   selector: 'page-registration',
@@ -8,30 +9,23 @@ import { ProfilePage } from '../profile/profile';
 })
 export class RegistrationPage {
 
+  public user: User;
+  public username: string;
   public firstName: string;
   public lastName: string;
-  public dateOfBirth: string;
-  public username: string;
   public email: string;
-  public address: string;
-  public city: string;
-  public country: string;
   public password: string;
+  public myProjects: Array<any>;
 
   constructor(public navCtrl: NavController) {
-
   }
 
-  navigateToProfilePage() {
+  navToProfilePage() {
     this.navCtrl.push(ProfilePage, {
+      username: this.username,
       firstName: this.firstName,
       lastName: this.lastName,
-      dateOfBirth: this.dateOfBirth,
-      username: this.username,
       email: this.email,
-      address: this.address,
-      city: this.city,
-      country: this.country,
       password: this.password
     });
   }

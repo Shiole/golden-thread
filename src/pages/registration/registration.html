@@ -1,75 +1,50 @@
 <ion-header>
-        <ion-navbar>
-            <ion-title>
-                Registration Page
-            </ion-title>
-        </ion-navbar>
-    </ion-header>
-    
-    <ion-content padding>
-        <p>
-            Welcome to the registration page!
-        </p>
-    
-        <ion-list>
+    <ion-navbar>
+        <ion-title>
+            Registration Page
+        </ion-title>
+    </ion-navbar>
+</ion-header>
 
-            <ion-item>
-                <ion-label stacked>First Name</ion-label>
-                <ion-input type="text"></ion-input>
-            </ion-item>
+<ion-content text-center padding>
+    <p>
+        Welcome to the registration page!
+    </p>
 
-            <ion-item>
-                <ion-label stacked>Last Name</ion-label>
-                <ion-input type="text"></ion-input>
-            </ion-item>
+    <ion-list>
 
-            <ion-item>
-                <ion-label stacked>Date of Birth</ion-label>
-                <ion-input type="text" placeholder="DD/MM/YY"></ion-input>
-            </ion-item>
-
-            <ion-item>
-                <ion-label stacked>Username</ion-label>
-                <ion-input type="text"></ion-input>
-            </ion-item>
-
-            <ion-item>
-                <ion-label stacked>Email</ion-label>
-                <ion-input type="email"></ion-input>
-            </ion-item>
-
-            <ion-item>
-                <ion-label stacked>Confirm Email</ion-label>
-                <ion-input type="email"></ion-input>
-            </ion-item>
-
-            <ion-item>
-                <ion-label stacked>Address</ion-label>
-                <ion-input type="text"></ion-input>
-            </ion-item>
-
-            <ion-item>
-                <ion-label stacked>City</ion-label>
-                <ion-input type="text"></ion-input>
-            </ion-item>
-
-            <ion-item>
-                <ion-label stacked>Country</ion-label>
-                <ion-input type="text"></ion-input>
-            </ion-item>
-    
-            <ion-item>
-                    <ion-label stacked>Password</ion-label>
-                    <ion-input type="Password"></ion-input>
-            </ion-item>
-
-            <ion-item>
-                <ion-label stacked>Confirm Password</ion-label>
-                <ion-input type="Password"></ion-input>
+        <ion-item>
+            <ion-label stacked>Username</ion-label>
+            <ion-input [(ngModel)]="username" type="text"></ion-input>
         </ion-item>
 
-        </ion-list>
-    
-        <button ion-button round (click)="navigateToProfilePage()">Register</button>
-    
-    </ion-content>
+        <ion-item>
+            <ion-label stacked>First Name</ion-label>
+            <ion-input [(ngModel)]="firstName" type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>Surname</ion-label>
+            <ion-input [(ngModel)]="lastName" type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>Email</ion-label>
+            <ion-input [(ngModel)]="email" type="email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>Password</ion-label>
+            <ion-input type="Password"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>Confirm Password</ion-label>
+            <ion-input type="Password"></ion-input>
+        </ion-item>
+
+    </ion-list>
+
+    <button ion-button round (click)="navToProfilePage()">Register</button>
+
+</ion-content>

@@ -17,8 +17,17 @@ export class DetailsPage {
 
   public charity: string;
   public details: string;
+  public portfolio: Array<any>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
+
+  addToSaved() {
+
+  }
+
+  addToPortfolio() {
+
   }
 
   ionViewDidLoad() {

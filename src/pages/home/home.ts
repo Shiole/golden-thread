@@ -14,7 +14,8 @@ export class HomePage {
   }
 
   navToHome() {
-    this.navCtrl.push(HomePage);
+    this.navCtrl.setRoot(HomePage);
+    this.navCtrl.popToRoot();
   }
 
   navToLogin() {
@@ -22,7 +23,6 @@ export class HomePage {
   }
 
   navToRegistration() {
-    this.navCtrl.setRoot(HomePage);
     this.navCtrl.push(RegistrationPage);
   }
 
