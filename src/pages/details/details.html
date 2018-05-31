@@ -13,12 +13,11 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content text-center padding>
   <p>
     {{details}}
   </p>
 
-  <button ion-button round block (click)="addToPortfolio()">Donate Once</button>
-  <button ion-button round block (click)="addToPortfolio()">Donate Monthly</button>
+  <button ion-button round (click)="presentPaymenModal()">Donate Now</button>
 
 </ion-content>

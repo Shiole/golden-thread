@@ -13,14 +13,35 @@
 </ion-header>
 
 <ion-content text-center padding>
+
+    <ion-list radio-group [(ngModel)]="frequency">
+        <ion-item>
+            <ion-label>One Time</ion-label>
+            <ion-radio value="oneTime" checked></ion-radio>
+        </ion-item>
+        <ion-item>
+            <ion-label>Weekly</ion-label>
+            <ion-radio value="weekly" checked></ion-radio>
+        </ion-item>
+        <ion-item>
+            <ion-label>Monthly</ion-label>
+            <ion-radio value="monthly"></ion-radio>
+        </ion-item>
+    </ion-list>
+
     <ion-item>
-        <ion-label stacked>Name on Card</ion-label>
+        <ion-label stacked>Amount</ion-label>
+        <ion-input [(ngModel)]="amount" type="number"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label stacked>Card Holder</ion-label>
         <ion-input [(ngModel)]="cardName" type="text"></ion-input>
     </ion-item>
 
     <ion-item>
         <ion-label stacked>Card Number</ion-label>
-        <ion-input [(ngModel)]="cardNum" type="text"></ion-input>
+        <ion-input [(ngModel)]="cardNum" type="number"></ion-input>
     </ion-item>
 
     <ion-item>
@@ -30,7 +51,7 @@
 
     <ion-item>
         <ion-label stacked>CVC</ion-label>
-        <ion-input [(ngModel)]="cvc" type="text"></ion-input>
+        <ion-input [(ngModel)]="cvc" type="number"></ion-input>
     </ion-item>
 
     <ion-item>
@@ -40,7 +61,7 @@
 
     <ion-item>
         <ion-label stacked>Postal Code</ion-label>
-        <ion-input [(ngModel)]="postal code" type="text"></ion-input>
+        <ion-input [(ngModel)]="postalCode" type="text"></ion-input>
     </ion-item>
 
     <ion-item>
@@ -58,6 +79,8 @@
         <ion-input [(ngModel)]="stateProvince" type="text"></ion-input>
     </ion-item>
 
-    <button ion-button round>Save</button>
+    <button ion-button round block>Donate</button>
+    <button ion-button round block>Pay with PayPal</button>
+    <button ion-button round block (click)="cancel()">Cancel</button>
 
 </ion-content>

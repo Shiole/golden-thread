@@ -6,16 +6,22 @@
     </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-    <h1 text-center>
+<ion-content text-center padding>
+    <h1>
         Welcome {{firstName}} to your profile!
     </h1>
+
+    <ion-item>
+        <ion-thumbnail>
+            <img src="http://dragene.no/wp-content/uploads/2016/06/default1.jpg"/>
+        </ion-thumbnail>
+    </ion-item>
 
     <p>Name: {{firstName}} {{lastName}}</p>
     <p>Email: {{email}}</p>
 
     <button ion-button round block (click)="navToPortfolioPage()">My Portfolio</button>
-    <button ion-button round block (click)="navToPaymentPage()">Paymet Details</button>
+    <button ion-button round block (click)="navToPaymentPage()">Payment Details</button>
     <button ion-button round block (click)="navToProjectsPage()">View Projects</button>
     <button ion-button round block>Settings</button>
     <button ion-button round block (click)="navToHomePage()">Log Out</button>

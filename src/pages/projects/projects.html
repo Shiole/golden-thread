@@ -6,17 +6,24 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>Conservation Projects</ion-title>
+    <ion-title>Available Projects</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <p>
-    View all available projects here!
-  </p>
-
+<ion-content text-center padding>
   <ion-list>
-    <ion-item *ngFor="let project of projects" (click)="navToDetails(project)">{{project.name}}</ion-item>
+    <ion-item *ngFor="let project of projects" (click)="navToDetails(project)">
+      <ion-card>
+        <img src="https://images.pexels.com/photos/384555/pexels-photo-384555.jpeg?auto=compress&cs=tinysrgb&h=350" />
+        <ion-card-content>
+          <ion-card-title>
+            {{project.name}}
+          </ion-card-title>
+          <p>
+            {{project.details}}
+          </p>
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
   </ion-list>
-
 </ion-content>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
+import { PaymentPage } from '../payment/payment';
 
 /**
  * Generated class for the DetailsPage page.
@@ -19,15 +20,12 @@ export class DetailsPage {
   public details: string;
   public portfolio: Array<any>;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController) {
   }
 
-  addToSaved() {
-
-  }
-
-  addToPortfolio() {
-
+  presentPaymenModal() {
+    let paymentModal = this.modalCtrl.create(PaymentPage);
+    paymentModal.present();
   }
 
   ionViewDidLoad() {
