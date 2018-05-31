@@ -6,9 +6,9 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>Payment</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>Payment</ion-title>
+    </ion-navbar>
 
 </ion-header>
 
@@ -31,6 +31,31 @@
     <ion-item>
         <ion-label stacked>CVC</ion-label>
         <ion-input [(ngModel)]="cvc" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label stacked>Billing Address</ion-label>
+        <ion-input [(ngModel)]="address" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label stacked>Postal Code</ion-label>
+        <ion-input [(ngModel)]="postal code" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label stacked>City</ion-label>
+        <ion-input [(ngModel)]="city" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label stacked>Country</ion-label>
+        <ion-input [(ngModel)]="country" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label stacked>State/Province</ion-label>
+        <ion-input [(ngModel)]="stateProvince" type="text"></ion-input>
     </ion-item>
 
     <button ion-button round>Save</button>

@@ -33,6 +33,7 @@ export class ProfilePage {
   }
 
   navToHomePage() {
+    this.navCtrl.setRoot(HomePage);
     this.navCtrl.popToRoot();
   }
 

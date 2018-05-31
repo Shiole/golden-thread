@@ -28,6 +28,8 @@ export class RegistrationPage {
       email: this.email,
       password: this.password
     });
+
+    this.navCtrl.setRoot(ProfilePage);
   }
 
 }

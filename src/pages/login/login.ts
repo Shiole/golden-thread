@@ -23,6 +23,8 @@ export class LoginPage {
     this.navCtrl.push(ProfilePage, {
       username: this.username
     });
+
+    this.navCtrl.setRoot(ProfilePage);
   }
 
 }
