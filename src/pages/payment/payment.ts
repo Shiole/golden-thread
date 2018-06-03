@@ -65,6 +65,12 @@ export class PaymentPage {
           handler: () => {
             console.log('Donate clicked');
             this.donationSuccessful();
+            let sum = this.user.totalDonated + this.amount;
+            this.navCtrl.setRoot(PortfolioPage, {
+              amount: this.amount,
+              totalDonated: sum,
+              donatedList: this.donatedList
+            })
           }
         }
       ]
@@ -78,14 +84,7 @@ export class PaymentPage {
       subTitle: 'Thank you for donating!',
       buttons: ['Ok']
     });
-
     console.log('Donate clicked');
-    let sum = this.user.totalDonated + this.amount;
-    this.navCtrl.push(PortfolioPage, {
-      amount: this.amount,
-      totalDonated: sum,
-      donatedList: this.donatedList
-    })
 
     alert.present();
   }

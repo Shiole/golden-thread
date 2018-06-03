@@ -1,9 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Chart } from 'chart.js';
-import { User } from '../../model/user';
 import { Charity } from '../../model/charity';
 import { TabsPage } from '../tabs/tabs';
+import { ProfilePage } from '../profile/profile';
 
 /**
  * Generated class for the PortfolioPage page.
@@ -31,7 +31,7 @@ export class PortfolioPage {
   }
 
   navToProfile() {
-      this.navCtrl.push(TabsPage);
+      this.navCtrl.push(ProfilePage);
   }
 
   ionViewDidLoad() {

@@ -16,14 +16,20 @@ export class LoginPage {
    
   }
 
+  navToProfile() {
+    this.navCtrl.push(ProfilePage, {
+      username: this.username
+    });
+  }
+
   navToRegistration() {
     this.navCtrl.push(RegistrationPage);
   }
 
-  navToTabs() {
+  /* navToTabs() {
     this.navCtrl.push(TabsPage, {
       username: this.username
     });
-  }
+  } */
 
 }

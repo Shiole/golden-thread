@@ -24,12 +24,20 @@ export class ProfilePage {
 
   }
 
+  navToProjects() {
+    this.navCtrl.push(ProjectsPage);
+  }
+
+  navToPortfolio() {
+    this.navCtrl.push(PortfolioPage);
+  }
+
   navToPaymentPage() {
     this.navCtrl.push(PaymentPage);
   }
 
   navLogOut() {
-    this.navCtrl.setRoot(HomePage);
+    this.navCtrl.push(HomePage);
   }
 
   ionViewDidLoad() {
