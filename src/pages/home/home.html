@@ -1,10 +1,24 @@
 <ion-content text-center padding>
 
-  <h1>
-    Charity App
+  <h1 class="font">
+    ChariTea
   </h1>
 
-  <button ion-button round (click)="navToLogin()">Login</button>
-  <button ion-button round (click)="navToRegistration()">Register</button>
-  <button ion-button round (click)="navToRegistration()">FAQ</button>
+  <ion-grid>
+      <ion-row>
+        <ion-col>
+            <button ion-button round (click)="navToLogin()">Sign in</button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+            <button ion-button round (click)="navToRegistration()">Register</button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col>
+              <button ion-button round (click)="navToHome()">FAQ</button>
+          </ion-col>
+        </ion-row>
+    </ion-grid>
 </ion-content>

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ProfilePage } from '../profile/profile';
-import { User } from '../../model/user';
+import { HomePage } from '../home/home';
 
 @Component({
   selector: 'page-registration',
@@ -9,7 +9,6 @@ import { User } from '../../model/user';
 })
 export class RegistrationPage {
 
-  public user: User;
   public username: string;
   public firstName: string;
   public lastName: string;
@@ -28,6 +27,10 @@ export class RegistrationPage {
       email: this.email,
       password: this.password
     });
+  }
+
+  navHome() {
+    this.navCtrl.push(HomePage);
   }
 
 }

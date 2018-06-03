@@ -4,33 +4,38 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>Portfolio</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-<ion-content padding>
-  <h4>
-    Raised so far
-  </h4>
-  <!-- <ion-card>
+<ion-content text-center padding>
+  <h1>Portfolio</h1>
+  <ion-card>
     <ion-card-header>
-      Raised So Far
+      Raised So Far: ${{totalDonated}}
     </ion-card-header>
     <ion-card-content>
       <canvas #doughnutCanvas></canvas>
     </ion-card-content>
-  </ion-card> -->
+  </ion-card>
 
-  <h4>
-    My Projects
-  </h4>
+  <ion-card>
+    <ion-card-header>
+      My Projects
+    </ion-card-header>
+    <!-- <ion-list>
+      <ion-item *ngFor="let project of projects" (click)="navToDetails(project)">
+        <ion-card>
+          <img src={{project.image}}/>
+          <ion-card-content>
+            <ion-card-title>
+              {{project.name}}
+            </ion-card-title>
+          </ion-card-content>
+        </ion-card>
+      </ion-item>
+    </ion-list> -->
+  </ion-card>
 
-  <h4>
-    Donation History
-  </h4>
-
+  <ion-card>
+    <ion-card-header>
+      Donation History
+    </ion-card-header>
+  </ion-card>
 </ion-content>

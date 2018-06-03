@@ -26,6 +26,9 @@ export class DetailsPage {
   presentPaymenModal() {
     let paymentModal = this.modalCtrl.create(PaymentPage);
     paymentModal.present();
+    this.navCtrl.push(DetailsPage, {
+      charity: this.charity
+    })
   }
 
   ionViewDidLoad() {

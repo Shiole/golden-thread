@@ -1,15 +1,5 @@
-<ion-header>
-    <ion-navbar>
-        <ion-title>
-            Login Page
-        </ion-title>
-    </ion-navbar>
-</ion-header>
-
 <ion-content text-center padding>
-    <p>
-        Welcome to the login page!
-    </p>
+    <h1>Sign In</h1>
 
     <ion-list>
         <ion-item>
@@ -23,7 +13,7 @@
             </ion-item>
     </ion-list>
 
-    <button ion-button round block (click)="navToProfilePage()">Log In</button>
-    <button ion-button round block (click)="navToRegistration()">Sign Up</button>
+    <button ion-button round (click)="navToTabs()">Sign In</button>
+    <button ion-button round (click)="navToRegistration()">Sign Up</button>
 
 </ion-content>

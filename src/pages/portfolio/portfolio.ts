@@ -1,6 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-// import { Chart } from 'chart.js';
+import { Chart } from 'chart.js';
+import { User } from '../../model/user';
+import { Charity } from '../../model/charity';
 
 /**
  * Generated class for the PortfolioPage page.
@@ -20,13 +22,18 @@ export class PortfolioPage {
 
   doughnutChart: any;
 
+  public totalDonated: number;
+  public projects: Array<Charity>;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+      this.projects = this.navParams.get('donatedList');
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PortfolioPage');
+    this.totalDonated = this.navParams.get('totalDonated');
 
-    /* this.doughnutChart = new Chart(this.doughnutCanvas.nativeElement, {
+    this.doughnutChart = new Chart(this.doughnutCanvas.nativeElement, {
  
       type: 'doughnut',
       data: {
@@ -53,7 +60,7 @@ export class PortfolioPage {
           }]
       }
 
-  }); */
+  });
   }
 
 }

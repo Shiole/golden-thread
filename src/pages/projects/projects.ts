@@ -23,10 +23,14 @@ export class ProjectsPage {
   public ocean: Charity;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.water = new Charity();
+    this.gates = new Charity();
+    this.ocean = new Charity();
+    
     this.projects = [
-      this.water = {id: 1, name: 'Charity: water', details: 'test'},
-      this.gates = {id: 2, name: 'Bill & Melinda Gates Foundation', details: 'test'},
-      this.ocean = {id: 3, name: 'Oceana', details: 'test'}
+      this.water = {id: 1, name: 'Charity: water', details: 'test', image: 'https://upleaf.com/sites/default/files/styles/screenshots/public/resources/charitywater-logo.jpg?itok=OCGe0BqB'},
+      this.gates = {id: 2, name: 'Bill & Melinda Gates Foundation', details: 'test', image: 'http://www.hrt.hr/media/tt_news/Bill-and-Melinda-Gates-Foundation.jpg'},
+      this.ocean = {id: 3, name: 'Oceana', details: 'test', image: 'http://oceana.org/sites/default/files/oceana_logo_o.png'}
     ];
 
   }

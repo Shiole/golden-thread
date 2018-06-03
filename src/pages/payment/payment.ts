@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { User } from '../../model/user';
+import { Charity } from '../../model/charity';
+import { PortfolioPage } from '../portfolio/portfolio';
+import { TabsPage } from '../tabs/tabs';
 
 /**
  * Generated class for the PaymentPage page.
@@ -15,7 +19,27 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class PaymentPage {
 
+  public user: User;
+  public charity: Charity;
+  public amount: number;
+  public totalDonated: number;
+  public donatedList: Array<Charity>;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.user = new User;
+    this.donatedList = [];
+  }
+
+  donate() { 
+    if (this.donatedList.indexOf(this.charity) < 0) {
+      this.donatedList.push(this.charity);
+    }
+    let sum = this.user.totalDonated + this.amount;
+    this.navCtrl.push(PortfolioPage, {
+      amount: this.amount,
+      totalDonated: sum,
+      donatedList: this.donatedList
+    });
   }
 
   cancel() {
@@ -24,6 +48,7 @@ export class PaymentPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PaymentPage');
+    this.charity = this.navParams.get('charity');
   }
 
 }

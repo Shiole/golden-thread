@@ -15,6 +15,22 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
-.header {
-    background-color: #ffed7c
-  }
+.scroll-content {
+    background-color: map-get($colors, secondary);
+}
+
+h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+}
+
+card-header {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+}
+
+card-title {
+    font-family: 'Source Sans Pro', sans-serif;
+}

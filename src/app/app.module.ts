@@ -13,6 +13,7 @@ import { ProjectsPage } from '../pages/projects/projects';
 import { DetailsPage } from '../pages/details/details';
 import { PortfolioPage } from '../pages/portfolio/portfolio';
 import { PaymentPage } from '../pages/payment/payment';
+import { TabsPage } from '../pages/tabs/tabs';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PaymentPage } from '../pages/payment/payment';
     ProjectsPage,
     DetailsPage,
     PortfolioPage,
-    PaymentPage
+    PaymentPage,
+    TabsPage
   ],
   imports: [
     BrowserModule,
@@ -40,7 +42,8 @@ import { PaymentPage } from '../pages/payment/payment';
     ProjectsPage,
     DetailsPage,
     PortfolioPage,
-    PaymentPage
+    PaymentPage,
+    TabsPage
   ],
   providers: [
     StatusBar,
