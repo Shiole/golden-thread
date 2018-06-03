@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Chart } from 'chart.js';
 import { User } from '../../model/user';
 import { Charity } from '../../model/charity';
+import { TabsPage } from '../tabs/tabs';
 
 /**
  * Generated class for the PortfolioPage page.
@@ -27,6 +28,10 @@ export class PortfolioPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
       this.projects = this.navParams.get('donatedList');
+  }
+
+  navToProfile() {
+      this.navCtrl.push(TabsPage);
   }
 
   ionViewDidLoad() {
